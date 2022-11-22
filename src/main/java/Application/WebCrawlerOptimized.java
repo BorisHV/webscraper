@@ -77,9 +77,9 @@ public class WebCrawlerOptimized implements WebCrawler {
 	private List<String> getUrls(String url) {
 		
 		List<String> list = new ArrayList<>();
-//		if (url.endsWith("jpg")) {
-//			return list;
-//		}
+		if (url.endsWith("jpg")) {
+			return list;
+		}
 		
 		try {
 			Document doc = Jsoup.connect(url).ignoreContentType(true).get();
