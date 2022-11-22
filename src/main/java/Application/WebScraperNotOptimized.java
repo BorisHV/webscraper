@@ -19,7 +19,7 @@ public class WebScraperNotOptimized {
         System.out.println(message);
     }
 
-    public static void scrape(String pathFromCrawler) {
+    public void scrape(String pathFromCrawler) {
 
         try {
             int indexToFilterDirectory = pathFromCrawler.lastIndexOf('/');
@@ -52,14 +52,14 @@ public class WebScraperNotOptimized {
         }
     }
 
-    private static void saveDirectory(String filteredDirectory) {
+    private void saveDirectory(String filteredDirectory) {
 
             File file = new File("ScrapedWebsite", filteredDirectory);
             file.mkdirs();
             successMessage(filteredDirectory);
     }
 
-    private static void saveJpg(URL url, String filteredFileName, String filteredDirectory) throws IOException {
+    private void saveJpg(URL url, String filteredFileName, String filteredDirectory) throws IOException {
         File imgToBeWritten;
         if (filteredDirectory.equals("")) {
             imgToBeWritten = new File("ScrapedWebsite", filteredFileName);
@@ -72,7 +72,7 @@ public class WebScraperNotOptimized {
         successMessage(filteredFileName);
     }
 
-    private static void saveFile(URL url, String filteredFileName, String filteredDirectory) throws IOException {
+    private void saveFile(URL url, String filteredFileName, String filteredDirectory) throws IOException {
         File fileToBeWritten;
         if (filteredDirectory.equals("")) {
             fileToBeWritten = new File("ScrapedWebsite", filteredFileName);
