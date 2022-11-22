@@ -2,6 +2,6 @@ package Application;
 
 public interface WebScraper {
 	
-	void downloadWebPage(String URL);
+	void scrape(String pathFromCrawler, String initialUrl);
 	
 }

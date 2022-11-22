@@ -1,8 +1,6 @@
 package Application;
 
-import java.util.Set;
-
 public interface WebCrawler {
 	
-	Set<String> findAllURLs(String initialURL);
+	void crawl(String initialUrl);
 }
