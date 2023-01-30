@@ -1,2 +1,2 @@
 # webscraper
-A web crawling & scraping console app in Java with threading.
+A web crawling & scraping console app with threading.
